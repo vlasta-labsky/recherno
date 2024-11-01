@@ -25,7 +25,16 @@ jobs:
       matrix:
         os: [ubuntu-24.04, windows-latest]
         build_type: [Release]
-
+        c_compiler: [gcc, cl]
+        cpp_compiler: [g++, cl]
+        exclude:
+          - os: ubuntu-24.04
+            c_compiler: cl
+            cpp_compiler: cl
+          - os: windows-latest
+            c_compiler: gcc
+            cpp_compiler: g++
+      
     steps:
     - uses: actions/checkout@v4
 
