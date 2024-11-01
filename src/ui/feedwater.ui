@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FeedWater</class>
+ <widget class="QDialog" name="FeedWater">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>296</width>
+    <height>823</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Feed Water</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout_10">
+     <item row="1" column="0" colspan="3">
+      <widget class="QGroupBox" name="groupFeedInlet">
+       <property name="title">
+        <string>Inlet Valves</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="lineFeedInlet1"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineFeedInlet2"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="buttonFeedInlet2Open">
+          <property name="text">
+           <string>Open</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="buttonFeedInlet1Open">
+          <property name="text">
+           <string>Open</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="buttonFeedInlet3Open">
+          <property name="text">
+           <string>Open</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="lineFeedInlet3"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="buttonFeedInlet1Close">
+          <property name="text">
+           <string>Close</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="buttonFeedInlet2Close">
+          <property name="text">
+           <string>Close</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="buttonFeedInlet3Close">
+          <property name="text">
+           <string>Close</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="13" column="0">
+      <widget class="QLabel" name="labelDrumLevel">
+       <property name="text">
+        <string>Drum level</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLineEdit" name="lineFeedFlow"/>
+     </item>
+     <item row="2" column="0" colspan="3">
+      <widget class="QGroupBox" name="groupFeedDischarge">
+       <property name="title">
+        <string>Discharge Valves</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="lineFeedDischarge3"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="buttonFeedDischarge3Close">
+          <property name="text">
+           <string>Close</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="lineFeedDischarge1"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="buttonFeedDischarge1Open">
+          <property name="text">
+           <string>Open</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineFeedDischarge2"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="buttonFeedDischarge2Open">
+          <property name="text">
+           <string>Open</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="buttonFeedDischarge2Close">
+          <property name="text">
+           <string>Close</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="buttonFeedDischarge1Close">
+          <property name="text">
+           <string>Close</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="buttonFeedDischarge3Open">
+          <property name="text">
+           <string>Open</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="labelDrumTemp">
+       <property name="text">
+        <string>Drum temp</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="1">
+      <widget class="QLineEdit" name="lineDrumLevel"/>
+     </item>
+     <item row="12" column="1">
+      <widget class="QLineEdit" name="lineDrumPressure"/>
+     </item>
+     <item row="0" column="0" colspan="3">
+      <widget class="QGroupBox" name="groupFeedPumps">
+       <property name="title">
+        <string>Feed Pumps</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="buttonFeedPump1">
+          <property name="text">
+           <string>Pump 1</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="buttonFeedPump2">
+          <property name="text">
+           <string>Pump 2</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="buttonFeedPump3">
+          <property name="text">
+           <string>Pump 3</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="12" column="0">
+      <widget class="QLabel" name="labelDrumPressure">
+       <property name="text">
+        <string>Drum pressure</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="labelFeedFlow">
+       <property name="text">
+        <string>Feedwater flow</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="3">
+      <widget class="QGroupBox" name="groupFeedValve">
+       <property name="title">
+        <string>Feed Valve</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="1" colspan="2">
+         <widget class="QLineEdit" name="editLevelSetpoint"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="lineMainValve"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineStartupValve"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="buttonAuto">
+          <property name="text">
+           <string>Auto</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="buttonManual">
+          <property name="text">
+           <string>Manual</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelLevelSetpoint">
+          <property name="text">
+           <string>Level Setpoint</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="buttonMainValve">
+          <property name="text">
+           <string>Main Valve</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="button3Element">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>3 Element Control</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="buttonStartupValve">
+          <property name="text">
+           <string>Startup Valve</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QLineEdit" name="lineDrumTemp"/>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QGroupBox" name="groupDrain">
+       <property name="title">
+        <string>Drain Valve</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="1" column="5" rowspan="2">
+         <widget class="QLineEdit" name="lineDrainValve"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="buttonDrainInc">
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="buttonDrainManual">
+          <property name="text">
+           <string>Manual</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="buttonDrainAuto">
+          <property name="text">
+           <string>Auto</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelDrainSetpoint">
+          <property name="text">
+           <string>Level Setpoint</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="buttonDrainDec">
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="labelDrainFlow">
+          <property name="text">
+           <string>Flow</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4" rowspan="2">
+         <widget class="QLabel" name="LabelDrainValve">
+          <property name="text">
+           <string>Valve</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3" colspan="3">
+         <widget class="QLineEdit" name="lineDrainFlow"/>
+        </item>
+        <item row="0" column="3" colspan="3">
+         <widget class="QLineEdit" name="lineDrainSetpoint"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

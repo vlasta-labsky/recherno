@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OfflineCooling</class>
+ <widget class="QDialog" name="OfflineCooling">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>490</width>
+    <height>371</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Offline Cooling Control</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="2" colspan="2">
+    <widget class="QGroupBox" name="groupLoop2">
+     <property name="title">
+      <string>Loop 2</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelPump2Flow">
+        <property name="text">
+         <string>Flow</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="buttonLoop2PumpStart">
+        <property name="text">
+         <string>Start</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QPushButton" name="buttonLoop2OutletOpen">
+        <property name="text">
+         <string>Open</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="labelInlet2">
+        <property name="text">
+         <string>Inlet</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="labelPump2">
+        <property name="text">
+         <string>Pump</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLineEdit" name="lineLoop2PumpFlow"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="buttonLoop2PumpStop">
+        <property name="text">
+         <string>Stop</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="buttonLoop2InletClose">
+        <property name="text">
+         <string>Close</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="buttonLoop2OutletClose">
+        <property name="text">
+         <string>Close</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="labelOutlet2">
+        <property name="text">
+         <string>Outlet</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="buttonLoop2InletOpen">
+        <property name="text">
+         <string>Open</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QGroupBox" name="groupLoop1">
+     <property name="title">
+      <string>Loop 1</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="2" column="0">
+       <widget class="QPushButton" name="buttonLoop1InletClose">
+        <property name="text">
+         <string>Close</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="buttonLoop1PumpStart">
+        <property name="text">
+         <string>Start</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="labelInlet1">
+        <property name="text">
+         <string>Inlet</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="buttonLoop1OutletClose">
+        <property name="text">
+         <string>Close</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="labelPump1">
+        <property name="text">
+         <string>Pump</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="buttonLoop1OutletOpen">
+        <property name="text">
+         <string>Open</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="buttonLoop1InletOpen">
+        <property name="text">
+         <string>Open</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="buttonLoop1PumpStop">
+        <property name="text">
+         <string>Stop</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="labelOutlet1">
+        <property name="text">
+         <string>Outlet</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLineEdit" name="lineLoop1PumpFlow"/>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="labelPump1Flow">
+        <property name="text">
+         <string>Flow</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="4">
+    <widget class="QGroupBox" name="groupControl">
+     <property name="title">
+      <string>Control</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="1" column="1" rowspan="2">
+       <widget class="QLineEdit" name="lineLoop1CoolingFlow"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="buttonLoop1Inc">
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="buttonLoop2Inc">
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3" rowspan="2">
+       <widget class="QLineEdit" name="lineLoop2DischargeTemp"/>
+      </item>
+      <item row="3" column="1" rowspan="2">
+       <widget class="QLineEdit" name="lineLoop2CoolingFlow"/>
+      </item>
+      <item row="1" column="2" rowspan="2">
+       <widget class="QLineEdit" name="lineLoop1OutletTemp"/>
+      </item>
+      <item row="3" column="5" rowspan="2">
+       <widget class="QLabel" name="labelLoop2">
+        <property name="text">
+         <string>Loop 2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3" rowspan="2">
+       <widget class="QLineEdit" name="lineLoop1DischargeTemp"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="buttonLoop1Dec">
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="buttonLoop2Dec">
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4" rowspan="2">
+       <widget class="QLineEdit" name="lineLoop1FuelTemp"/>
+      </item>
+      <item row="3" column="4" rowspan="2">
+       <widget class="QLineEdit" name="lineLoop2FuelTemp"/>
+      </item>
+      <item row="1" column="5" rowspan="2">
+       <widget class="QLabel" name="labelLoop1">
+        <property name="text">
+         <string>Loop 1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2" rowspan="2">
+       <widget class="QLineEdit" name="lineLoop2OutletTemp"/>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="labelCoolingFlow">
+        <property name="text">
+         <string>Cooling Flow</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="labelOutletTemp">
+        <property name="text">
+         <string>Outlet Temp</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="labelDischargeTemp">
+        <property name="text">
+         <string>Discharge Temp</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="labelFuelTemp">
+        <property name="text">
+         <string>Max Fuel Temp</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

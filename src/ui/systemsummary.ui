@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SystemSummary</class>
+ <widget class="QDialog" name="SystemSummary">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>System Summary</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="0">
+    <widget class="QLabel" name="labelReactorPower">
+     <property name="text">
+      <string>Reactor Power</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="labelDrumPressure">
+     <property name="text">
+      <string>Drum Pressure</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLineEdit" name="lineDrumLevel"/>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="lineTurbineRPM"/>
+   </item>
+   <item row="8" column="1">
+    <widget class="QLineEdit" name="lineTurbineDiffExp"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelDrumLevel">
+     <property name="text">
+      <string>Drum Level</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLineEdit" name="lineTurbineControl"/>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="lineOutputPower"/>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLineEdit" name="lineVoidLoop2"/>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="labelReactor">
+     <property name="text">
+      <string>Reactor</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QLineEdit" name="lineFeedFlow"/>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLineEdit" name="lineVoidLoop1"/>
+   </item>
+   <item row="10" column="2">
+    <widget class="QLineEdit" name="lineHotwellLevel"/>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLineEdit" name="lineDrumPressure"/>
+   </item>
+   <item row="8" column="2">
+    <widget class="QLineEdit" name="lineDaLevel"/>
+   </item>
+   <item row="6" column="2">
+    <widget class="QLineEdit" name="lineECCStatus"/>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLabel" name="labelTurbine">
+     <property name="text">
+      <string>Turbine</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="labelVoidLoop1">
+     <property name="text">
+      <string>% Void Loop 1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="labelAux">
+     <property name="text">
+      <string>Auxiliary systems</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLineEdit" name="lineReactorPower"/>
+   </item>
+   <item row="2" column="2">
+    <widget class="QLineEdit" name="lineCondenserVacuum"/>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="labelVoidLoop2">
+     <property name="text">
+      <string>% Void Loop 2</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="labelSpeed">
+     <property name="text">
+      <string>Speed</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLabel" name="labelOutputPower">
+     <property name="text">
+      <string>Output Power</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLabel" name="labelTurbineControl">
+     <property name="text">
+      <string>Control Mode</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLabel" name="labelDiffExp">
+     <property name="text">
+      <string>Diff Expansion</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="labelVacuum">
+     <property name="text">
+      <string>Condenser Vacuum</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLabel" name="labelFeedFlow">
+     <property name="text">
+      <string>Feedwater Flow</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLabel" name="labelECCStatus">
+     <property name="text">
+      <string>ECC status</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2">
+    <widget class="QLabel" name="labelDaLevel">
+     <property name="text">
+      <string>DA Level</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="2">
+    <widget class="QLabel" name="labelHotwellLevel">
+     <property name="text">
+      <string>Hotwell Level</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
