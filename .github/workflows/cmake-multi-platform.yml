@@ -75,8 +75,6 @@ jobs:
         cmake --build . --config Release
         cmake --install . --prefix "C:/unicorn"
         cd ../..
-        $env:PKG_CONFIG_PATH += ';C:\unicorn\lib\pkgconfig'
-      shell: pwsh
 
     - name: Install Capstone on Windows
       if: runner.os == 'Windows'
@@ -89,8 +87,17 @@ jobs:
         cmake --build . --config Release
         cmake --install . --prefix "C:/capstone"
         cd ../..
-        $env:PKG_CONFIG_PATH += ';C:\capstone\lib\pkgconfig'
-        echo "Final PKG_CONFIG_PATH=$env:PKG_CONFIG_PATH"
+
+    - name: Set PkgConfig path on Windows
+      if: runner.os == 'Windows'
+      run: |
+        echo "PKG_CONFIG_PATH=C:\capstone\lib\pkgconfig;C:\unicorn\lib\pkgconfig" >> $env:GITHUB_ENV
+      shell: pwsh
+
+    - name: Check pkgconfig ENV on Windows
+      if: runner.os == 'Windows'
+      run: |
+        echo $env:PKG_CONFIG_PATH
       shell: pwsh
         
     - name: Configure CMake
