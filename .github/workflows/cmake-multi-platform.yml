@@ -70,13 +70,11 @@ jobs:
         git clone https://github.com/unicorn-engine/unicorn.git
         cd unicorn
         (Get-Content CMakeLists.txt).Replace('if(UNICORN_INSTALL AND NOT MSVC)', 'if(UNICORN_INSTALL)') | Set-Content CMakeLists.txt
-        (Get-Content CMakeLists.txt).Replace('${CMAKE_INSTALL_FULL_LIBDIR}', '${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}') | Set-Content CMakeLists.txt
-        (Get-Content CMakeLists.txt).Replace('${CMAKE_INSTALL_FULL_INCLUDEDIR}', '${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_INCLUDEDIR}') | Set-Content CMakeLists.txt
         mkdir build
         cd build
-        cmake ..
+        cmake .. -DCMAKE_INSTALL_PREFIX="C:\unicorn"
         cmake --build . --config Release
-        cmake --install . --prefix "C:\unicorn"
+        cmake --install .
         Get-Content C:\unicorn\lib\pkgconfig\unicorn.pc
         cd ../..
       shell: pwsh
@@ -88,9 +86,9 @@ jobs:
         cd capstone
         mkdir build
         cd build
-        cmake ..
+        cmake .. -DCMAKE_INSTALL_PREFIX="C:\capstone"
         cmake --build . --config Release
-        cmake --install . --prefix "C:\capstone"
+        cmake --install .
         cd ../..
 
     - name: Set PkgConfig path on Windows
