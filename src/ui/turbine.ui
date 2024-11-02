@@ -25,12 +25,18 @@
         <property name="text">
          <string>Reset</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="0" column="1">
        <widget class="QPushButton" name="buttonTrip">
         <property name="text">
          <string>Trip</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -54,6 +60,9 @@
         <property name="text">
          <string>Stop</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="3" column="4">
@@ -67,6 +76,9 @@
         <property name="text">
          <string>3600</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="3" column="2">
@@ -79,6 +91,9 @@
         </property>
         <property name="text">
          <string>1800</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -103,6 +118,9 @@
         <property name="text">
          <string>2700</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="4" column="3" colspan="2">
@@ -125,6 +143,9 @@
            <property name="text">
             <string>Off</string>
            </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
           </widget>
          </item>
          <item row="1" column="1">
@@ -137,6 +158,9 @@
            </property>
            <property name="text">
             <string>On</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -168,6 +192,9 @@
         <property name="text">
          <string>900</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="4" column="0" colspan="3">
@@ -190,6 +217,9 @@
            <property name="text">
             <string>Medium</string>
            </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item row="1" column="0">
@@ -203,6 +233,9 @@
            <property name="text">
             <string>Slow</string>
            </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item row="1" column="2">
@@ -215,6 +248,9 @@
            </property>
            <property name="text">
             <string>Fast</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -353,12 +389,18 @@
         <property name="text">
          <string>Close</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="0" column="1">
        <widget class="QPushButton" name="buttonBreakerOpen">
         <property name="text">
          <string>Open</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -393,6 +435,9 @@
         <property name="text">
          <string>Auto</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="1" column="1">
@@ -410,6 +455,9 @@
         <property name="text">
          <string>Startup</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="0" column="0">
@@ -424,6 +472,9 @@
         <property name="text">
          <string>Manual</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="0" column="1">
@@ -433,6 +484,9 @@
        <widget class="QPushButton" name="buttonValveMain">
         <property name="text">
          <string>Main</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
         </property>
        </widget>
       </item>

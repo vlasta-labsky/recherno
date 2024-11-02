@@ -28,13 +28,13 @@ public:
 
     float GETDRM(uint16_t id);
 
-    std::tuple<float, uint16_t> GETDAR(uint16_t id);
+    std::tuple<float, int16_t> GETDAR(uint16_t id);
     void SETDAR(float val, uint16_t id);
 
     void SETCND(float val, uint16_t id);
     float GETCND(uint16_t id);
 
-    float GETTRB(uint16_t id);
+    std::tuple<float, int16_t> GETTRB(uint16_t id);
     void SETTRB(float val, uint16_t id);
 
     void SETAUT(uint16_t val);

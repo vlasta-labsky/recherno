@@ -32,14 +32,14 @@ TurbineSupport::~TurbineSupport()
 
 void TurbineSupport::refresh()
 {
-    int lubeOil = m_api->GETTRB(34);
-    int hydraulicOil = m_api->GETTRB(33);
-    int steamSeal = m_api->GETTRB(35);
-    int steamDrain = m_api->GETTRB(36);
+    int lubeOil = std::get<0>(m_api->GETTRB(34));
+    int hydraulicOil = std::get<0>(m_api->GETTRB(33));
+    int steamSeal = std::get<0>(m_api->GETTRB(35));
+    int steamDrain = std::get<0>(m_api->GETTRB(36));
 
-    float lubeOilPressure = m_api->GETTRB(38) - 101.3;
-    float hydraulicOilPressure = m_api->GETTRB(37) - 101.3;
-    float steamSealPressure = m_api->GETTRB(39) - 101.3;
+    float lubeOilPressure = std::get<0>(m_api->GETTRB(38)) - 101.3;
+    float hydraulicOilPressure = std::get<0>(m_api->GETTRB(37)) - 101.3;
+    float steamSealPressure = std::get<0>(m_api->GETTRB(39)) - 101.3;
 
     ui->buttonLubeStop->setChecked(lubeOil == 0);
     ui->buttonLubeStart->setChecked(lubeOil == 1);

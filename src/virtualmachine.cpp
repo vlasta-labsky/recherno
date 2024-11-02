@@ -149,7 +149,7 @@ bool VirtualMachine::hook_code(uc_engine *uc, uint64_t address, uint32_t size, v
 
     auto importedSymbols = machine->importedSymbols();
 
-    uint8_t code[size];
+    uint8_t code[size]; //!FIXME GCC extension, breaks MSVC
     uc_mem_read(uc, address, code, size);
 
 //    if(address == 0x10001066)

@@ -25,7 +25,10 @@
 
 #define CHRNOB32_INTERVAL 100
 #define CHRNOB32_DLL "chrnob_32.dll"
+
 #define ICD_FILE "shutdown.icd"
+//#define ICD_FILE "1800PSIG_660MW.ICD"
+//#define ICD_FILE "chernobyl04.icd"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -249,13 +252,14 @@ void MainWindow::tick()
 //        qDebug() << "GETDRM" << id << val;
 //    }
 
-//    QList<uint16_t> trbIds = {0x0, 0x10, 0x9, 0xf};
-//    for(auto id : trbIds)
-//    {
-//        float val = m_api->GETTRB(id);
+//   qDebug() << "asd";
+//   QList<uint16_t> trbIds = {0x0, 0x4, 0x5, 0x6, 0x8, 0x15, 0x1, 0x2, 0x3, 0x29, 0x10, 0x9, 0xf};
+//   for(auto id : trbIds)
+//   {
+//        const auto [val1, val2] = m_api->GETTRB(id);
 
-//        qDebug() << "GETTRB" << id << val;
-//    }
+//        qDebug() << "GETTRB" << id << val1 << val2;
+//   }
 
 //    QList<uint16_t> cndIds = {0x1c, 0xc, 0xd, 0xe};
 //    for(auto id : cndIds)
@@ -317,4 +321,5 @@ void MainWindow::tick()
     m_offline->refresh();
     m_rods->refresh();
     m_turbineSupport->refresh();
+    m_turbine->refresh();
 }

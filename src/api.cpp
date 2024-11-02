@@ -212,6 +212,7 @@ float Chrnob32API::GETDRM(uint16_t id)
     return *reinterpret_cast<long double *>(ret); //!FIXME is this right?
 }
 
+// get deareator
 // returns tuple
 // 1: DA level setpoint, DA manual/auto
 // 3: DA level, DA manual/auto
@@ -223,7 +224,7 @@ float Chrnob32API::GETDRM(uint16_t id)
 // 13: DA drain valve
 // 30: hotwell setpoint
 // 32: DA flow valve
-std::tuple<float, uint16_t> Chrnob32API::GETDAR(uint16_t id)
+std::tuple<float, int16_t> Chrnob32API::GETDAR(uint16_t id)
 {
     uint32_t esp;
     m_machine->reg(UC_X86_REG_ESP, &esp);
@@ -667,10 +668,18 @@ float Chrnob32API::IXCLGT(uint16_t id)
 }
 
 // get turbine
-// 0: control mode ???
+// returns tuple
+// 0: [???, valve auto -1 manual 0]
+// 1: [startup valve signal, current valve startup 1 main 2]
+// 2: [main valve signal, current valve startup 1 main 2]
+// 3: pressure setpoint
+// 4: [speed setpoint, ?]
+// 6: [?, turbine trip -1]
+// 5: [?, breaker closed -1]
 // 9: rpm
 // 15: power in MW
 // 16: diff exp
+// 21: runup speed [rpm, 1/2/3 slow/medium/fast]
 // 33: hydraulic oil
 // 34: lube oil
 // 35: steam seal
@@ -678,7 +687,9 @@ float Chrnob32API::IXCLGT(uint16_t id)
 // 37: ?
 // 38: ?
 // 39: ?
-float Chrnob32API::GETTRB(uint16_t id)
+// 41: vibration
+
+std::tuple<float, int16_t> Chrnob32API::GETTRB(uint16_t id)
 {
     uint32_t esp;
     m_machine->reg(UC_X86_REG_ESP, &esp);
@@ -694,13 +705,26 @@ float Chrnob32API::GETTRB(uint16_t id)
 
     m_machine->setReg(UC_X86_REG_ESP, &esp);
 
-    float ret;
-    m_machine->read(retPtr, &ret, sizeof(ret));
+    float ret1;
+    m_machine->read(retPtr, &ret1, sizeof(ret1));
 
-    return ret;
+    uint16_t ret2;
+    m_machine->reg(UC_X86_REG_AX, &ret2);
+
+    return {ret1, ret2};
 }
 
 // set turbine
+// 1: valve auto/manual
+// 2: valve open/close
+// 3: pressure setpoint
+// 4: speed setpoint
+// 5: startup valve
+// 6: main valve
+// 7: generator breaker 0 (open) 1 (close)
+// 8: turbine trip
+// 10: turning gear
+// 11: runup speed 1 (slow) 2 (medium) 3 (fast)
 // 12: hydraulic oil
 // 13: lube oil
 // 14: steam seal

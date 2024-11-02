@@ -25,4 +25,7 @@
      implement dialogs
 
 # Turbine
-     reverse engineer
+     turning gear status
+     phase
+     vibration
+     allow set pressure setpoint

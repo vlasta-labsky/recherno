@@ -19,13 +19,13 @@ SystemSummary::~SystemSummary()
 
 void SystemSummary::refresh()
 {
-    float turbineRpm = m_api->GETTRB(9);
+    float turbineRpm = std::get<0>(m_api->GETTRB(9));
     ui->lineTurbineRPM->setText(QString::number(turbineRpm, 'f', 0));
 
-    float turbinePower = m_api->GETTRB(15);
+    float turbinePower = std::get<0>(m_api->GETTRB(15));
     ui->lineOutputPower->setText(QString::number(turbinePower, 'f', 1)+"MW");
 
-    float turbineDiffExp = m_api->GETTRB(16);
+    float turbineDiffExp = std::get<0>(m_api->GETTRB(16));
     ui->lineTurbineDiffExp->setText(QString::number(turbineDiffExp, 'f', 3));
 
     float feedWaterFlow = m_api->GETFED(1);
