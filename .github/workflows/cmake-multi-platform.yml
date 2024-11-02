@@ -59,6 +59,11 @@ jobs:
       if: runner.os == 'Windows'
       uses: jurplel/install-qt-action@v4
 
+    - name: Install PkgConfig on Windows
+      if: runner.os == 'Windows'
+      run: |
+        choco install pkgconfiglite
+
     - name: Install Unicorn on Windows
       if: runner.os == 'Windows'
       run: |
@@ -69,6 +74,18 @@ jobs:
         cmake ..
         cmake --build . --config Release
         cmake --install . --prefix "C:/unicorn"
+        cd ../..
+
+    - name: Install Capstone on Windows
+      if: runner.os == "Windows"
+      run: |
+        git clone https://github.com/capstone-engine/capstone.git
+        cd capstone
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build . --config Release
+        cmake --install . --prefix "C:/capstone"
         cd ../..
         
     - name: Configure CMake
