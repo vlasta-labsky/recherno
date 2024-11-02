@@ -70,8 +70,8 @@ jobs:
         git clone https://github.com/unicorn-engine/unicorn.git
         cd unicorn
         (Get-Content CMakeLists.txt).Replace('if(UNICORN_INSTALL AND NOT MSVC)', 'if(UNICORN_INSTALL)') | Set-Content CMakeLists.txt
-        (Get-Content CMakeLists.txt).Replace('CMAKE_INSTALL_FULL_INCLUDEDIR', 'CMAKE_INSTALL_INCLUDEDIR') | Set-Content CMakeLists.txt
-        (Get-Content CMakeLists.txt).Replace('CMAKE_INSTALL_FULL_LIBDIR', 'CMAKE_INSTALL_LIBDIR') | Set-Content CMakeLists.txt
+        (Get-Content CMakeLists.txt).Replace('${CMAKE_INSTALL_FULL_LIBDIR}', '${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}') | Set-Content CMakeLists.txt
+        (Get-Content CMakeLists.txt).Replace('${CMAKE_INSTALL_FULL_INCLUDEDIR}', '${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_INCLUDEDIR}') | Set-Content CMakeLists.txt
         mkdir build
         cd build
         cmake ..
