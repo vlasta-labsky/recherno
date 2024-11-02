@@ -67,23 +67,20 @@ jobs:
     - name: Install Unicorn on Windows
       if: runner.os == 'Windows'
       run: |
-        mkdir C:\unicorn
-        mkdir C:\unicorn\lib
-        mkdir C:\unicorn\lib\pkgconfig
         git clone https://github.com/unicorn-engine/unicorn.git
         cd unicorn
-        ${c:CMakeLists.txt} = ${c:CMakeLists.txt} -replace 'if(UNICORN_INSTALL AND NOT MSVC)','if(UNICORN_INSTALL)'
+        (Get-Content CMakeLists.txt).Replace('if(UNICORN_INSTALL AND NOT MSVC)', 'if(UNICORN_INSTALL)') | Set-Content CMakeLists.txt
         mkdir build
         cd build
         cmake ..
         cmake --build . --config Release
         cmake --install . --prefix "C:\unicorn"
         cd ../..
+      shell: pwsh
 
     - name: Install Capstone on Windows
       if: runner.os == 'Windows'
       run: |
-        mkdir C:\capstone
         git clone https://github.com/capstone-engine/capstone.git
         cd capstone
         mkdir build
@@ -97,19 +94,18 @@ jobs:
       if: runner.os == 'Windows'
       run: |
         echo "PKG_CONFIG_PATH=C:\capstone\lib\pkgconfig;C:\unicorn\lib\pkgconfig" >> $env:GITHUB_ENV
+        dir C:\capstone\lib\pkgconfig
+        dir C:\unicorn\lib\pkgconfig
       shell: pwsh
         
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
-      run: |
-        dir C:\capstone\lib\pkgconfig
-        dir C:\unicorn\lib\pkgconfig
-        echo "PKG_CONFIG_PATH=$env:PKG_CONFIG_PATH"
-        cmake -B ${{ steps.strings.outputs.build-output-dir }}\
-        -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }}\
-        -DCMAKE_C_COMPILER=${{ matrix.c_compiler }}\
-        -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}\
+      run: >
+        cmake -B ${{ steps.strings.outputs.build-output-dir }}
+        -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }}
+        -DCMAKE_C_COMPILER=${{ matrix.c_compiler }}
+        -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
         -S ${{ github.workspace }}
       shell: pwsh
 
