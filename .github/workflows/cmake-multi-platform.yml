@@ -75,6 +75,7 @@ jobs:
         cmake ..
         cmake --build . --config Release
         cmake --install . --prefix "C:\unicorn"
+        Get-Content C:\unicorn\lib\pkgconfig\unicorn.pc
         cd ../..
       shell: pwsh
 
