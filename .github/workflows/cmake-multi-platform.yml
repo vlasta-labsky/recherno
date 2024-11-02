@@ -72,6 +72,7 @@ jobs:
         mkdir C:\unicorn\lib\pkgconfig
         git clone https://github.com/unicorn-engine/unicorn.git
         cd unicorn
+        ${c:CMakeLists.txt} = ${c:CMakeLists.txt} -replace 'if(UNICORN_INSTALL AND NOT MSVC)','if(UNICORN_INSTALL)'
         mkdir build
         cd build
         cmake ..
